@@ -2,8 +2,11 @@ import React from 'react'
 import { Container, Logo, Rules, SubTitle, Title } from './styles'
 import ButtonComponent from '../../components/buttons'
 import { Alert } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Start() {
+  const navigation = useNavigation()
+
   function handleNavToPlayAlone() {
     Alert.alert('Botão clicado 1')
   }
@@ -13,15 +16,15 @@ export default function Start() {
   }
 
   function handleNavToRules() {
-    Alert.alert('Rules clicado!')
+    navigation.navigate('Rules')
   }
 
   return (
     <Container>
-      <Logo
+      {/* <Logo
         source={require('../../assets/logoDark.png')}
         style={{ resizeMode: 'contain' }}
-      />
+      /> */}
       <Title>Bem-vindo ao {'\n'} Bomb game</Title>
       <SubTitle>Escolha um modo de jogo.</SubTitle>
       <ButtonComponent
