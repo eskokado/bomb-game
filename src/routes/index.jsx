@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import Start from '../pages/start'
 import Rules from '../pages/rules'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import PlayAlone from '../pages/play_alone'
 
 const Stack = createNativeStackNavigator()
 
@@ -15,6 +16,7 @@ export default function Routes() {
       >
         <Stack.Screen name='Start' component={Start} />
         <Stack.Screen name='Rules' component={Rules} />
+        <Stack.Screen name='PlayAlone' component={PlayAlone} />
       </Stack.Navigator>
     </NavigationContainer>
   )
