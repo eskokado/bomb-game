@@ -6,28 +6,28 @@ import { RFValue } from 'react-native-responsive-fontsize'
 export const Container = styled.View`
   flex: 1;
   padding: 20px;
-  padding-top: ${getStatusBarHeight() + 20}px;
+  padding-top: ${getStatusBarHeight() + RFValue(20)}px;
   background-color: ${({ theme }) => theme.colors.background};
 `
 
 export const Icon = styled(MaterialIcons)`
-  font-size: ${30}px;
-  margin-bottom: ${20}px;
+  font-size: ${RFValue(30)}px;
+  margin-bottom: ${RFValue(20)}px;
   color: ${({ theme }) => theme.colors.white};
 `
 
 export const Title = styled.Text`
-  font-size: ${32}px;
+  font-size: ${RFValue(32)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
-  margin-left: ${10}px;
+  margin-left: ${RFValue(10)}px;
   color: ${({ theme }) => theme.colors.white};
 `
 
 export const Paragraph = styled.Text`
-  font-size: ${16}px;
+  font-size: ${RFValue(16)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
-  margin-left: ${10}px;
-  margin-top: ${15}px;
+  margin-left: ${RFValue(10)}px;
+  margin-top: ${RFValue(15)}px;
   color: ${({ theme }) => theme.colors.textLight};
 `
 
@@ -40,5 +40,4 @@ export const ScrollTextRules = styled.ScrollView.attrs(() => ({
 }))`
   flex: 1;
   padding: 16px;
-  background-color: #fff;
 `
