@@ -19,6 +19,10 @@ export default function Start() {
     navigation.navigate('Rules')
   }
 
+  function handleNavToPlayAlone() {
+    navigation.navigate('PlayAlone')
+  }
+
   return (
     <Container>
       {/* <Logo
