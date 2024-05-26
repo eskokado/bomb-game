@@ -10,8 +10,8 @@ import {
 } from './styles'
 import bombImg from '../../assets/bomba.png'
 import { ImageBackground } from 'react-native'
-import PasswordInput from '../../components/PasswordInput'
 import { Button } from '../../components/buttons/styles'
+import PasswordInput from '../../components/play_alone/PasswordInput'
 
 function handleNavToStart() {
   navigation.navigate('Start')
