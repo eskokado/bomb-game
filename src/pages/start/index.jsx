@@ -12,7 +12,7 @@ export default function Start() {
   }
 
   function handleNavToPlayTogether() {
-    Alert.alert('Botão clicado 2')
+    navigation.navigate('PlayTogether')
   }
 
   function handleNavToRules() {
