@@ -9,19 +9,26 @@ import {
   Title
 } from './styles'
 import bombImg from '../../assets/bomba.png'
-import { ImageBackground } from 'react-native'
-import { Button } from '../../components/buttons/styles'
+import { Alert, ImageBackground } from 'react-native'
 import PasswordInput from '../../components/play_alone/PasswordInput'
-
-function handleNavToStart() {
-  navigation.navigate('Start')
-}
-
-function handleStartGame() {
-  Alert.alert('Jogo começou!')
-}
+import ButtonComponent from '../../components/buttons'
+import { useNavigation } from '@react-navigation/native'
 
 export default function PlayAlone() {
+  const navigation = useNavigation()
+
+  function handleNavToStart() {
+    navigation.navigate('Start')
+  }
+
+  function handleStartGame() {
+    Alert.alert('Jogo começou!')
+  }
+
+  function handleExploded() {
+    navigation.navigate('Exploded')
+  }
+
   return (
     <Container>
       <Title>Bomb Game Solo</Title>
@@ -49,9 +56,12 @@ export default function PlayAlone() {
 
       <PasswordInput />
 
-      <Button buttonText='Iniciar' handlePress={handleStartGame} />
-
-      <Button buttonText='Página Inicial' handlePress={handleNavToStart} />
+      <ButtonComponent buttonText={'Iniciar'} handlePress={handleStartGame} />
+      <ButtonComponent
+        buttonText={'Página Inicial'}
+        handlePress={handleNavToStart}
+      />
+      <ButtonComponent buttonText={'Fracassado'} handlePress={handleExploded} />
     </Container>
   )
 }
