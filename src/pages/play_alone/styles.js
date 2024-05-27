@@ -39,5 +39,5 @@ export const TipTitle = styled.Text`
 export const TipText = styled.Text`
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.regular};
-  color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.white};
 `
